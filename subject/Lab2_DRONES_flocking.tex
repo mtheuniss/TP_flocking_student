@@ -120,7 +120,7 @@ Drone dynamics are simplified as double integrators. In \texttt{drone.py}, compl
 \subsubsection{Reynolds Rules}
 Let's now compute the Reynolds Rules. Each robot $i$ receives as control input an acceleration proportional to an attractive/repulsive force $u_i^\alpha$ such that:
 $$
-u_i^\alpha = c_1^{\alpha} \sum_{j\in \mathcal{N}_i}\phi_\alpha(||q_i - q_j||_\sigma)\mathbf{n}_{ij} + c_2^{\alpha} \sum_{j\in \mathcal{N}_i}a_{ij}\cdot(p_i-p_j)
+u_i^\alpha = c_1^{\alpha} \sum_{j\in \mathcal{N}_i}\phi_\alpha(||q_i - q_j||_\sigma)\mathbf{n}_{ij} + c_2^{\alpha} \sum_{j\in \mathcal{N}_i}a_{ij}\cdot(p_j-p_i)
 $$
 The second term represents the velocity matching term while the first term corresponds to flock separation and alignment.
 

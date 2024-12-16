@@ -151,7 +151,7 @@ class Drone():
         self._velocity = np.zeros(2)
         self._pose = self._pose
 
-        self._past_pos.append(self._pose) # for display purpose only
+        self._past_pos.append(self._pose.tolist()) # for display purpose only
 
     def diplay_agent(self, ax: plt.Axes):
         """
