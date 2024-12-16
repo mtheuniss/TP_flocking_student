@@ -156,7 +156,7 @@ Let's make our flock reactive to avoid \textbf{convex obstacles}. The key idea i
 Computation of the neighboring drones and the closest point on the obstacle to a drone is provided. You can check this in the function \texttt{get\_pos\_vel\_virtual\_agent()} in \texttt{obstacle.py} and in the function \texttt{update\_flock} in \texttt{flock.py}.\\ \\
 An additional repulsive $u_i^{\beta}$ force is added to each drone to prevent it from colliding with obstacles.
 $$
-u_i^{\beta} = c_1^{\beta} \sum_{j\in \mathcal{N}_i^{obs}}\phi_\beta(||q_i - \widehat{q}_j||_\sigma)\mathbf{n}_{ij} + c_2^{\beta} \sum_{j\in \mathcal{N}_i^{obs}}a_{ij} \cdot (p_i-\widehat{p}_j)
+u_i^{\beta} = c_1^{\beta} \sum_{j\in \mathcal{N}_i^{obs}}\phi_\beta(||q_i - \widehat{q}_j||_\sigma)\mathbf{n}_{ij} + c_2^{\beta} \sum_{j\in \mathcal{N}_i^{obs}}a_{ij} \cdot (\widehat{p}_j-p_i)
 $$
 
 \paragraph{To do:}
